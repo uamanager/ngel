@@ -1,0 +1,410 @@
+{
+  "version": 1,
+  "projects": {
+    "ngel-cdk": {
+      "projectType": "library",
+      "root": "libs/cdk",
+      "sourceRoot": "libs/cdk/src",
+      "prefix": "ngel",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/cdk/tsconfig.lib.json",
+            "project": "libs/cdk/ng-package.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/cdk/tsconfig.lib.json",
+              "libs/cdk/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/cdk/**"
+            ]
+          }
+        }
+      }
+    },
+    "ngel-cdk-element": {
+      "projectType": "library",
+      "root": "libs/cdk/element",
+      "sourceRoot": "libs/cdk/element/src",
+      "prefix": "ngel",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/cdk/element/tsconfig.lib.json",
+              "libs/cdk/element/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/cdk/element/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/cdk/element/jest.config.js",
+            "tsConfig": "libs/cdk/element/tsconfig.spec.json",
+            "setupFile": "libs/cdk/element/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "ngel-cdk-projection": {
+      "projectType": "library",
+      "root": "libs/cdk/projection",
+      "sourceRoot": "libs/cdk/projection/src",
+      "prefix": "ngel",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/cdk/projection/tsconfig.lib.json",
+              "libs/cdk/projection/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/cdk/projection/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/cdk/projection/jest.config.js",
+            "tsConfig": "libs/cdk/projection/tsconfig.spec.json",
+            "setupFile": "libs/cdk/projection/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "ngel-cdk-store": {
+      "projectType": "library",
+      "root": "libs/cdk/store",
+      "sourceRoot": "libs/cdk/store/src",
+      "prefix": "ngel",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/cdk/store/tsconfig.lib.json",
+              "libs/cdk/store/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/cdk/store/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/cdk/store/jest.config.js",
+            "tsConfig": "libs/cdk/store/tsconfig.spec.json",
+            "setupFile": "libs/cdk/store/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "ngel-cdk-wrapper": {
+      "projectType": "library",
+      "root": "libs/cdk/wrapper",
+      "sourceRoot": "libs/cdk/wrapper/src",
+      "prefix": "ngel",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/cdk/wrapper/tsconfig.lib.json",
+              "libs/cdk/wrapper/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/cdk/wrapper/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/cdk/wrapper/jest.config.js",
+            "tsConfig": "libs/cdk/wrapper/tsconfig.spec.json",
+            "setupFile": "libs/cdk/wrapper/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "ngel-core": {
+      "projectType": "library",
+      "root": "libs/core",
+      "sourceRoot": "libs/core/src",
+      "prefix": "ngel",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/core/tsconfig.lib.json",
+            "project": "libs/core/ng-package.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/core/tsconfig.lib.json",
+              "libs/core/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/core/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/core/jest.config.js",
+            "tsConfig": "libs/core/tsconfig.spec.json",
+            "setupFile": "libs/core/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "ngel-packages-form": {
+      "projectType": "library",
+      "root": "libs/packages/form",
+      "sourceRoot": "libs/packages/form/src",
+      "prefix": "ngel",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/packages/form/tsconfig.lib.json",
+            "project": "libs/packages/form/ng-package.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/packages/form/tsconfig.lib.json",
+              "libs/packages/form/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/packages/form/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/packages/form/jest.config.js",
+            "tsConfig": "libs/packages/form/tsconfig.spec.json",
+            "setupFile": "libs/packages/form/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "ngel-packages-preloader": {
+      "projectType": "library",
+      "root": "libs/packages/preloader",
+      "sourceRoot": "libs/packages/preloader/src",
+      "prefix": "ngel",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/packages/preloader/tsconfig.lib.json",
+            "project": "libs/packages/preloader/ng-package.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/packages/preloader/tsconfig.lib.json",
+              "libs/packages/preloader/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/packages/preloader/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/packages/preloader/jest.config.js",
+            "tsConfig": "libs/packages/preloader/tsconfig.spec.json",
+            "setupFile": "libs/packages/preloader/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "ngel-stores-mobx": {
+      "projectType": "library",
+      "root": "libs/stores/mobx",
+      "sourceRoot": "libs/stores/mobx/src",
+      "prefix": "ngel",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/stores/mobx/tsconfig.lib.json",
+            "project": "libs/stores/mobx/ng-package.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/stores/mobx/tsconfig.lib.json",
+              "libs/stores/mobx/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/stores/mobx/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/stores/mobx/jest.config.js",
+            "tsConfig": "libs/stores/mobx/tsconfig.spec.json",
+            "setupFile": "libs/stores/mobx/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "ngel-stores-ngrx": {
+      "projectType": "library",
+      "root": "libs/stores/ngrx",
+      "sourceRoot": "libs/stores/ngrx/src",
+      "prefix": "ngel",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/stores/ngrx/tsconfig.lib.json",
+            "project": "libs/stores/ngrx/ng-package.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/stores/ngrx/tsconfig.lib.json",
+              "libs/stores/ngrx/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/stores/ngrx/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/stores/ngrx/jest.config.js",
+            "tsConfig": "libs/stores/ngrx/tsconfig.spec.json",
+            "setupFile": "libs/stores/ngrx/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "ngel-styles-bootstrap": {
+      "projectType": "library",
+      "root": "libs/styles/bootstrap",
+      "sourceRoot": "libs/styles/bootstrap/src",
+      "prefix": "ngel",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/styles/bootstrap/tsconfig.lib.json",
+            "project": "libs/styles/bootstrap/ng-package.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/styles/bootstrap/tsconfig.lib.json",
+              "libs/styles/bootstrap/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/styles/bootstrap/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/styles/bootstrap/jest.config.js",
+            "tsConfig": "libs/styles/bootstrap/tsconfig.spec.json",
+            "setupFile": "libs/styles/bootstrap/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "ngel-styles-material": {
+      "projectType": "library",
+      "root": "libs/styles/material",
+      "sourceRoot": "libs/styles/material/src",
+      "prefix": "ngel",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/styles/material/tsconfig.lib.json",
+            "project": "libs/styles/material/ng-package.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/styles/material/tsconfig.lib.json",
+              "libs/styles/material/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/styles/material/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/styles/material/jest.config.js",
+            "tsConfig": "libs/styles/material/tsconfig.spec.json",
+            "setupFile": "libs/styles/material/src/test-setup.ts"
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  },
+  "schematics": {
+    "@nrwl/angular:library": {
+      "unitTestRunner": "jest"
+    }
+  },
+  "defaultProject": "ngel-core"
+}

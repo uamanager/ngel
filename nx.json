@@ -1,0 +1,85 @@
+{
+  "npmScope": "ngel",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": "*",
+    "ng-package.json": "*",
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/insights",
+      "options": {
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "ngel-cdk": {
+      "tags": [
+        "ngel-cdk"
+      ]
+    },
+    "ngel-cdk-element": {
+      "tags": [
+        "ngel-cdk"
+      ]
+    },
+    "ngel-cdk-projection": {
+      "tags": [
+        "ngel-cdk"
+      ]
+    },
+    "ngel-cdk-store": {
+      "tags": [
+        "ngel-cdk"
+      ]
+    },
+    "ngel-cdk-wrapper": {
+      "tags": [
+        "ngel-cdk"
+      ]
+    },
+    "ngel-core": {
+      "tags": [
+        "ngel-core"
+      ]
+    },
+    "ngel-packages-form": {
+      "tags": [
+        "ngel-packages-form"
+      ]
+    },
+    "ngel-packages-preloader": {
+      "tags": [
+        "ngel-packages-preloader"
+      ]
+    },
+    "ngel-stores-mobx": {
+      "tags": [
+        "ngel-stores-mobx"
+      ]
+    },
+    "ngel-stores-ngrx": {
+      "tags": [
+        "ngel-stores-ngrx"
+      ]
+    },
+    "ngel-styles-bootstrap": {
+      "tags": [
+        "ngel-styles-bootstrap"
+      ]
+    },
+    "ngel-styles-material": {
+      "tags": [
+        "ngel-styles-material"
+      ]
+    }
+  }
+}

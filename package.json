@@ -1,0 +1,74 @@
+{
+  "name": "ng-ngel",
+  "version": "0.0.1",
+  "description": "Library for creation of animated SVG preloaders in runtime",
+  "main": "index.js",
+  "repository": "https://github.com/uamanager/ng-ngels",
+  "author": "uamanager",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "ng": "ng",
+    "nx": "nx",
+    "nps": "nps",
+    "start": "nps",
+    "update": "nx update @nrwl/workspace"
+  },
+  "dependencies": {
+    "@angular/animations": "^8.2.0",
+    "@angular/cdk": "~8.2.3",
+    "@angular/common": "^8.2.0",
+    "@angular/compiler": "^8.2.0",
+    "@angular/core": "^8.2.0",
+    "@angular/forms": "^8.2.0",
+    "@angular/platform-browser": "^8.2.0",
+    "@angular/platform-browser-dynamic": "^8.2.0",
+    "core-js": "^2.5.4",
+    "rxjs": "~6.4.0",
+    "zone.js": "^0.9.1"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^0.803.14",
+    "@angular-devkit/build-ng-packagr": "^0.803.20",
+    "@angular/cli": "8.3.14",
+    "@angular/compiler-cli": "^8.2.0",
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0",
+    "@nrwl/angular": "^8.8.3",
+    "@nrwl/jest": "8.8.3",
+    "@nrwl/workspace": "8.8.3",
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/git": "^9.0.0",
+    "@semantic-release/npm": "^7.0.5",
+    "@types/jest": "24.0.9",
+    "@types/node": "~8.9.4",
+    "codelyzer": "~5.0.1",
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "^3.0.2",
+    "husky": "^3.0.4",
+    "jest": "24.1.0",
+    "jest-junit": "^8.0.0",
+    "jest-preset-angular": "7.0.0",
+    "ng-packagr": "^5.7.1",
+    "nps": "^5.10.0",
+    "nps-utils": "^1.7.0",
+    "prettier": "1.18.2",
+    "semantic-release": "17.1.2",
+    "ts-jest": "24.0.0",
+    "tsickle": "^0.37.1",
+    "tslint": "~5.11.0",
+    "typescript": "~3.5.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "nps test.ci",
+      "pre-push": "nps test.ci"
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@ngel/cdk": [
+        "libs/cdk/src/index.ts"
+      ],
+      "@ngel/cdk/element": [
+        "libs/cdk/element/src/index.ts"
+      ],
+      "@ngel/cdk/projection": [
+        "libs/cdk/projection/src/index.ts"
+      ],
+      "@ngel/cdk/store": [
+        "libs/cdk/store/src/index.ts"
+      ],
+      "@ngel/cdk/wrapper": [
+        "libs/cdk/wrapper/src/index.ts"
+      ],
+      "@ngel/core": [
+        "libs/core/src/index.ts"
+      ],
+
+      "@ngel/package-form": [
+        "libs/packages/form/src/index.ts"
+      ],
+      "@ngel/package-preloader": [
+        "libs/packages/preloader/src/index.ts"
+      ],
+
+      "@ngel/store-ngrx": [
+        "libs/stores/ngrx/src/index.ts"
+      ],
+      "@ngel/store-mobx": [
+        "libs/stores/mobx/src/index.ts"
+      ],
+
+      "@ngel/style-bootstrap": [
+        "libs/styles/bootstrap/src/index.ts"
+      ],
+      "@ngel/style-material": [
+        "libs/styles/material/src/index.ts"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
+}
